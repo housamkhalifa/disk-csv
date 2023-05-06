@@ -118,6 +118,7 @@ class DISK_CSV(object):
         # optimization
         # loss_to_minimize = self.loss
 	#Sometimes you might need to mutliply by a large number depending on the problem here i'm providing an example
+	#You could start with a smaller values and the gradually increase depending on the faithfulness
         loss_to_minimize = self.loss + 285*self.emb_loss + 12*self.pair  +  0.4*self.latent_loss
         self.target_loss = loss_to_minimize
 
